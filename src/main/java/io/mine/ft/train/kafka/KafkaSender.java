@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 public class KafkaSender {
 
     @Autowired
-    KafkaTemplate kafkaTemplate;
+    KafkaTemplate<?, String> kafkaTemplate;
 
     public void createTopic(String host,String topic,int partNum,short repeatNum) {
         Properties props = new Properties();
